@@ -15,12 +15,12 @@ USER_AGENT = 'Mozilla/5.0 (Windows; U; Windows NT 5.1; en-GB; rv:1.9.0.3) Gecko/
 base = 'https://drive.google.com/uc?authuser=0&id=0B6lIWfjQ078qZW14Tkk1TmV2TjA&export=download' 
 ADDON = xbmcaddon.Addon(id='plugin.video.Hrtv.Wizard')
 dialog = xbmcgui.Dialog()    
-VERSION = "1.0.3"
+VERSION = "1.0.4"
 PATH = "Gonzalez"            
 
     
 def CATEGORIES():
-    link = OPEN_URL('https://pastebin.com/raw/yDz5UsLh').replace('\n','').replace('\r','')
+    link = OPEN_URL('https://pastebin.com/raw/C6yHhs6G').replace('\n','').replace('\r','')
     match = re.compile('name="(.+?)".+?rl="(.+?)".+?mg="(.+?)".+?anart="(.+?)".+?escription="(.+?)"').findall(link)
     for name,url,iconimage,fanart,description in match:
         addDir(name,url,1,iconimage,fanart,description)
